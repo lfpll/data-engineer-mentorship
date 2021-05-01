@@ -8,7 +8,7 @@ CREATE TABLE public.customers (
 
 
 CREATE TABLE public.orders (
-	order_id text NULL PRIMARY KEY,
+	order_id text PRIMARY KEY,
 	customer_id text unique NULL,
 	order_status text NULL,
 	order_purchase_timestamp text NULL,
@@ -18,14 +18,14 @@ CREATE TABLE public.orders (
 	order_estimated_delivery_date text NULL,
     CONSTRAINT fk_order
       FOREIGN KEY(customer_id) 
-	  REFERENCES orders(customer_id)
-	  ON DELETE SET NULL
+	  REFERENCES customers(customer_id)
+	  ON DELETE CASCADE
 );
 
 
 
 CREATE TABLE public.order_itens (
-	order_id text NULL PRIMARY KEY,
+	order_id text PRIMARY KEY,
 	order_item_id int8 NULL,
 	product_id text NULL,
 	seller_id text NULL,
@@ -35,6 +35,6 @@ CREATE TABLE public.order_itens (
     CONSTRAINT fk_order
       FOREIGN KEY(order_id) 
 	  REFERENCES orders(order_id)
-	  ON DELETE SET NULL
+	  ON DELETE CASCADE
 );
 
