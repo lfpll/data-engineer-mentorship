@@ -1,6 +1,6 @@
 # SQL DataBases simple explanation
 
-## Understanding basic SQL relationships and normalization
+## Understanding basic SQL relationships, normalization and kimball
 
 Dataset: https://www.kaggle.com/olistbr/brazilian-ecommerce
 
@@ -20,6 +20,4 @@ Good materials:
 - [Primary keys](https://www.postgresqltutorial.com/postgresql-primary-key/)
 - [Normalization](https://docs.microsoft.com/en-us/office/troubleshoot/access/database-normalization-description#:~:text=Normalization%20is%20the%20process%20of,eliminating%20redundancy%20and%20inconsistent%20dependency.)
 - [Normalization Exemplo](https://www.guru99.com/database-normalization.html)
-
-
-## Kimball
+- [Kimball](https://www.holistics.io/books/setup-analytics/kimball-s-dimensional-data-modeling/)
