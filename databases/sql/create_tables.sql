@@ -19,9 +19,29 @@ CREATE TABLE public.orders (
     CONSTRAINT fk_order
       FOREIGN KEY(customer_id) 
 	  REFERENCES customers(customer_id)
-	  ON DELETE CASCADE
+	  ON DELETE SET NULL
 );
 
+
+
+CREATE TABLE public.geolocation (
+	geolocation_zip_code_prefix int8 PRIMARY KEY,
+	geolocation_lat float8 NULL,
+	geolocation_lng float8 NULL,
+	geolocation_city text NULL,
+	geolocation_state text NULL
+);
+
+CREATE TABLE public.sellers (
+	seller_id text PRIMARY KEY,
+	seller_zip_code_prefix int8 NULL,
+	seller_city text NULL,
+	seller_state text null,
+	CONSTRAINT fk_seller
+      FOREIGN KEY(seller_zip_code_prefix) 
+	  REFERENCES geolocation(geolocation_zip_code_prefix)
+	  ON DELETE SET NULL
+);
 
 
 CREATE TABLE public.order_itens (
@@ -35,6 +55,40 @@ CREATE TABLE public.order_itens (
     CONSTRAINT fk_order
       FOREIGN KEY(order_id) 
 	  REFERENCES orders(order_id)
-	  ON DELETE CASCADE
+	  ON DELETE SET null,
+	CONSTRAINT fk_seller
+      FOREIGN KEY(seller_id) 
+	  REFERENCES sellers(seller_id)
+	  ON DELETE SET NULL
 );
+
+
+CREATE TABLE public.order_reviews (
+	review_id text PRIMARY KEY,
+	order_id text NULL,
+	review_score int8 NULL,
+	review_comment_title text NULL,
+	review_comment_message text NULL,
+	review_creation_date text NULL,
+	review_answer_timestamp text null,
+	CONSTRAINT fk_order
+      FOREIGN KEY(order_id) 
+	  REFERENCES orders(order_id)
+	  ON DELETE SET NULL
+);
+
+CREATE TABLE public.products (
+	product_id text PRIMARY KEY,
+	product_category_name text NULL,
+	product_name_lenght float8 NULL,
+	product_description_lenght float8 NULL,
+	product_photos_qty float8 NULL,
+	product_weight_g float8 NULL,
+	product_length_cm float8 NULL,
+	product_height_cm float8 NULL,
+	product_width_cm float8 NULL
+);
+
+
+
 
