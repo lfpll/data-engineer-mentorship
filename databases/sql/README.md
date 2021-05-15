@@ -4,10 +4,16 @@
 
 Dataset: https://www.kaggle.com/olistbr/brazilian-ecommerce
 
+Create a postgres container for the tests:
+
+    sudo docker run --name some-postgres -p 5432:5432 -e POSTGRES_PASSWORD=mysecretpassword -d postgres
+
 Scripts:
-- create_tables.sql     - Explaining about table relationships, fks and pks
-- noramlize_state.sql   - Explaining about normalization, data quality and a perfomance.
-- insert_data_sql.ipynb - Notebook to insert some data to sql.
+**/data_modelling**
+- create_tables.sql      - Explaining about table relationships, fks and pks
+- normlize_state.sql     - Explaining about normalization, data quality and a perfomance.
+- insert_data_sql.ipynb  - Notebook to insert some data to sql.
+- start_schema.sql       - Small Explanation over start-schemas and DataWareHousing
 
 Creating postgres container:
     
