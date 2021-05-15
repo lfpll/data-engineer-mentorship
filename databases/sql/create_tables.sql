@@ -1,4 +1,4 @@
-CREATE TABLE kimball.customers (
+CREATE TABLE public.customers (
 	customer_id text NULL UNIQUE PRIMARY KEY,
 	customer_unique_id text NOT NULL,
 	customer_zip_code_prefix int8 NULL,
@@ -7,7 +7,7 @@ CREATE TABLE kimball.customers (
 );
 
 
-CREATE TABLE kimball.orders (
+CREATE TABLE public.orders (
 	order_id text PRIMARY KEY,
 	customer_id text unique NULL,
 	order_status text NULL,
@@ -24,7 +24,7 @@ CREATE TABLE kimball.orders (
 
 
 
-CREATE TABLE kimball.geolocation (
+CREATE TABLE public.geolocation (
 	geolocation_zip_code_prefix int8 not null ,
 	geolocation_lat float8 NULL,
 	geolocation_lng float8 NULL,
@@ -32,7 +32,7 @@ CREATE TABLE kimball.geolocation (
 	geolocation_state text NULL
 );
 
-CREATE TABLE kimball.sellers (
+CREATE TABLE public.sellers (
 	seller_id text PRIMARY KEY,
 	seller_zip_code_prefix int8 NULL,
 	seller_city text NULL,
@@ -40,7 +40,7 @@ CREATE TABLE kimball.sellers (
 );
 
 
-CREATE TABLE kimball.order_itens (
+CREATE TABLE public.order_itens (
 	order_id text PRIMARY KEY,
 	order_item_id int8 NULL,
 	product_id text NULL,
@@ -63,7 +63,7 @@ CREATE TABLE kimball.order_itens (
 );
 
 
-CREATE TABLE kimball.order_reviews (
+CREATE TABLE public.order_reviews (
 	review_id text PRIMARY KEY,
 	order_id text NULL,
 	review_score int8 NULL,
@@ -77,7 +77,7 @@ CREATE TABLE kimball.order_reviews (
 	  ON DELETE SET NULL
 );
 
-CREATE TABLE kimball.products (
+CREATE TABLE public.products (
 	product_id text PRIMARY KEY,
 	product_category_name text NULL,
 	product_name_lenght float8 NULL,
