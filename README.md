@@ -1,11 +1,15 @@
 # Mentoring of Data Engineers
 
-This is a fast paced project based mentorship for people who want to be data enginners.
+This is a fast paced project based mentorship for people who want to be data enginners mostly.
+
+Greate resource for data engineers:
+[CookBook](https://github.com/andkret/Cookbook/blob/master/sections/02-BasicSkills.md#get-familiar-with-git)
 
 Python and small SQL knowledge is expected, the mentor should adapt for the level of knowledge of the mentored.
 
 Technologies used:
 - Docker
+- Git
 - SQL
 - Python
 - Kubernetes
