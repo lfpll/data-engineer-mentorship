@@ -11,3 +11,14 @@
 ## Tutorial
 
 [**Git Tutorial (EN-US)**](https://hackernoon.com/understanding-git-fcffd87c15a3#:~:text=Git%20is%20a%20type%20of,who%20changed%20it%2C%20and%20why)
+
+## Taks
+
+Define in your words:
+- init
+- clone
+- add
+- commit
+- push
+- branch & checkout
+- pull
