@@ -4,10 +4,6 @@
 
 Dataset: https://www.kaggle.com/olistbr/brazilian-ecommerce
 
-Create a postgres container for the tests:
-
-    sudo docker run --name some-postgres -p 5432:5432 -e POSTGRES_PASSWORD=mysecretpassword -d postgres
-
 Scripts:
 **/data_modelling**
 - create_tables.sql      - Explaining about table relationships, fks and pks
