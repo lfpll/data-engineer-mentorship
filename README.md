@@ -7,23 +7,14 @@ Greate resource for data engineers:
 
 Python and small SQL knowledge is expected, the mentor should adapt for the level of knowledge of the mentored.
 
-Technologies used:
-- Docker
-- Git
-- SQL
-- Python
-- Kubernetes
-- Terraform
-- Airflow
-- Hadoop Stack (Spark and Sqoop)
 
+## Folder Structure
 
-GCP Tools:
-- Apache Beam (DataFlow) and Apache Spark (DataProc)
-- Cloud Functions + Triggers with GCS 
-- Google Cloud Storage 
-- BigQuery
-- CloudSQL (if docker is not used)
+- databases: Concepts of sql and Tables also a little of data modeling
+- datalake: concepts of datalake, start of  ETLs with pandas and concepets of parquet and avro
+- ETL: talking about pyspark, streaming and batch
+- orchestrating: understanding about airflow and orchestrating of batch
+
 
 ## How it rolls?
 
