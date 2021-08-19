@@ -1,13 +1,15 @@
 from fastapi import FastAPI,Request
 import os
+import logging 
 import json
 from kafka import KafkaProducer
 from typing import List
 
 app = FastAPI()
+logging.error(os.environ['KAFKA_HOST'])
 
-producer = KafkaProducer(bootstrap_servers=
-                        os.environ['KAFKA_HOST'])
+producer = KafkaProducer(bootstrap_servers=os.environ['KAFKA_HOST'].split(','))
+
 TOPIC = os.environ['KAFKA_TOPIC']
 
 if isinstance(TOPIC,bytes):
